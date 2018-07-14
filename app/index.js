@@ -123,7 +123,10 @@ class ${app.capitalize()}(models.Model):
     name = fields.Char("Name")\n`
 
     fs.appendFileSync(`${app}/models/__init__.py`, `from . import ${app}`)
+    fs.chmodSync(`${app}/models/__init__.py`, 0755)
+
     fs.appendFileSync(`${app}/models/${app}.py`, models)
+    fs.chmodSync(`${app}/models/${app}.py`, 0755)
 
 }
 
@@ -175,4 +178,5 @@ var createview = (options, data) => {
     </odoo>`
 
     fs.appendFileSync(`${app}/views/${app}_views.xml`, views)
+    fs.chmodSync(`${app}/views/${app}_views.xml`, 0755)
 }
