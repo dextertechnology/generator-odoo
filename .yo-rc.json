@@ -1,0 +1,8 @@
+{
+  "generator-odoo": {
+    "promptValues": {
+      "author": "diwap",
+      "version": "10.0"
+    }
+  }
+}
